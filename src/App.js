@@ -1,23 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import InvoiceForm from "./components/InvoiceForm";
+import InvoiceList from "./components/InvoiceList";
+import "./styles/App.css";
 
 function App() {
+  const [invoices, setInvoices] = useState([]);
+
+  useEffect(() => {
+    localStorage.getItem("invoices") &&
+      setInvoices(JSON.parse(localStorage.getItem("invoices")));
+  }, []);
+
+  const handleAddInvoice = (invoice) => {
+    setInvoices([...invoices, invoice]);
+  };
+
+  useEffect(() => {
+    localStorage.setItem("invoices", JSON.stringify(invoices));
+  }, [invoices]);
+
+  const handleDeleteInvoice = (index) => {
+    const updated = invoices.filter((_, i) => i !== index);
+    setInvoices(updated);
+  };
+  const handleClearAll = () => {
+    setInvoices([]);
+    localStorage.removeItem("invoices");
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="invoice-container">
+        <h2>FATURA OLUŞTUR</h2>
+
+        <div className="form-section">
+          <InvoiceForm onAddInvoice={handleAddInvoice} />
+        </div>
+
+        <div className="table-section">
+          <InvoiceList
+            invoices={invoices}
+            onDeleteInvoice={handleDeleteInvoice}
+            onClearAll={handleClearAll}
+          />
+        </div>
+      </div>
     </div>
   );
 }

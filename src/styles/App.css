@@ -1,0 +1,160 @@
+.App{
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  font-family: "poppins", sans-serif;
+  padding: 40px;
+}
+.invoice-container{
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 850px;
+}
+.invoice-container h2{
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 8px;
+  color: #222;
+}
+.form-section{
+  background-color: #709dff;
+  border-radius: 8px;
+  padding: 35px 30px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
+  margin-bottom: 25px;
+}
+.invoice-form{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.form-row{
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.form-row >div{
+  flex: 0.48;
+}
+.form-label{
+  font-weight: 600;
+  color: white;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+.form-row:nth-child(2) .form-label:last-child{
+  margin-top: 8px;
+}
+.form-input{
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 13px;
+  background-color: #f9fafb;
+}
+.form-button{
+  align-self: flex-start;
+  width: 180px;
+  background: color #002d9c;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 0;
+  margin-top: 15px;
+  margin-left: 145px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.form-button:hover{
+  transform: scale(1.05);
+}
+.table-section{
+  margin-top: 20px;
+}
+.invoice-table{
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #709dff;
+  color:#fff;
+  text-align: left;
+}
+.invoice-table th,
+.invoice-table td:first-child{
+  max-width: 160px;
+  word-break: break-word;
+}
+
+.invoice-table th{
+  font-weight: 600;
+}
+
+button{
+  border:none;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 6px;
+  margin: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+button:hover{
+  transform: scale(1.05);
+}
+
+button:nth-child(1){
+  background-color: #002d9c;
+}
+button:nth-child(2){
+  background-color: #0033cc;
+}
+button:nth-child(3){
+  background-color: #d92828;
+}
+
+.button-group{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 25px;
+}
+
+.button-group button{
+  width: 200px;
+  height: 55px;
+  border-radius: 6px;
+  font-weight: 600;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+.button-group button:nth-child(1) {
+  background-color: #002d9c;
+  margin-left: -40px;
+}
+.button-group button:nth-child(2) {
+  background-color: #0033cc;
+}
+.button-group button:nth-child(3) {
+  background-color: #d92828;
+}
+.button-group button:hover{
+  transform: scale(1.05);
+}

@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+# FATURA OLUŞTURMA UYGULAMASI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Bu proje, kullanıcıların kolayca fatura oluşturmasını, fatura bilgilerini düzenlemesini, ve PDF olarak dışa aktarmasını sağlayan bir web uygulamasıdır.
+- Kullanıcılar oluşturdukları faturaları localStorage üzerinden saklayabilir ve daha sonra tekrar görüntüleyebilir.
+- Proje, modern ve sade bir arayüzle tasarlanmıştır ve Figma tasarımı temel alınarak CSS ile kodlanmıştır.
 
-## Available Scripts
+# ÖNE ÇIKAN ÖZELLİKLER:
 
-In the project directory, you can run:
+- Fatura bilgilerini (firma adı, ürün, miktar, fiyat, KDV vb.) girme
 
-### `npm start`
+- Otomatik toplam ve KDV hesaplama
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Faturaları PDF olarak indirme
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Fatura geçmişini localStorage’da saklama
 
-### `npm test`
+- Modern ve responsive tasarım
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# KULLANILAN TEKNOLOJİLER
 
-### `npm run build`
+- React.js
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- jsPDF
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- jspdf-autotable
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- CSS3
 
-### `npm run eject`
+- JavaScript (ES6)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Figma (UI Tasarımı için)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# KURULUM
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Projeyi klonla
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+git clone https://github.com/gamzefidan/fatura-olusturma-uygulamasi.git
+```
 
-## Learn More
+2. Proje klasörüne gir
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+cd fatura-olusturma-uygulamasi
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Gerekli bağımlılıkları yükle
 
-### Code Splitting
+```bash
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. projeyi çalıştır
 
-### Analyzing the Bundle Size
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Kullanım
 
-### Making a Progressive Web App
+1. Fatura Ekleme:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Firma adı, ürün bilgisi, miktar, birim fiyat, KDV oranı ve tarih alanlarını doldur.
 
-### Advanced Configuration
+- “Fatura Ekle” butonuna tıklayarak faturayı listeye ekle.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+2. Fatura Silme:
 
-### Deployment
+- Her fatura satırında bulunan “Sil” butonuna tıklayarak ilgili faturayı kaldırabilirsin.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+3. Tüm Faturaları Temizleme:
 
-### `npm run build` fails to minify
+- “Tümünü Temizle” butonuna tıklayarak listedeki tüm faturaları silebilirsin.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+4. PDF Olarak İndirme:
+
+- “PDF İndir” butonuna tıklayarak faturaları tablo halinde PDF olarak dışa aktarabilirsin.
+
+# Veri Saklama (LocalStorage)
+
+- Uygulama, kullanıcı tarafından oluşturulan tüm fatura verilerini tarayıcı localStorage alanında saklar.
+- Bu sayede sayfa yenilendiğinde veya tarayıcı kapatılıp açıldığında veriler kaybolmaz.
+- “Tümünü Temizle” butonuna tıklayarak bu verileri sıfırlayabilirsin.
+
+# PDF Oluşturma Özelliği
+
+- PDF oluşturma işlemi, jsPDF ve jspdf-autotable kütüphaneleri ile gerçekleştirilmiştir.
+- PDF çıktısı, oluşturulan faturaların tablo halinde bir dökümünü içerir.
+
+# EKRAN GÖRÜNTÜLERİ
+
+- Ana Sayfa
+  ![Ana Sayfa](./screenshots/ana-sayfa.png)
+  ![Fatura Listesi](./screenshots/fatura-listesi.png)
+  ![PDF Görünümü](./screenshots/pdf-gorunum.png)
