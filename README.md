@@ -89,6 +89,6 @@ npm start
 
 # EKRAN GÖRÜNTÜLERİ
 
-![Ana Sayfa](./screenshots/home-page.png)
-![Fatura Listesi](./screenshots/invoice-list.png)
-![PDF Görünümü](./screenshots/pdf-view.png)
+![Ana Sayfa](./public/home-page.png)
+![Fatura Listesi](./public/invoice-list.png)
+![PDF Görünümü](./public/pdf-view.png)
