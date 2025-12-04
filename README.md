@@ -1,22 +1,24 @@
-# FATURA OLUŞTURMA UYGULAMASI
+# INVOICE GENERATION APPLICATION
 
-- Bu proje, kullanıcıların kolayca fatura oluşturmasını, fatura bilgilerini düzenlemesini, ve PDF olarak dışa aktarmasını sağlayan bir web uygulamasıdır.
-- Kullanıcılar oluşturdukları faturaları localStorage üzerinden saklayabilir ve daha sonra tekrar görüntüleyebilir.
-- Proje, modern ve sade bir arayüzle tasarlanmıştır ve Figma tasarımı temel alınarak CSS ile kodlanmıştır.
+- This project is a web application that allows users to easily create invoices, edit invoice details, and export them as PDF files.
 
-# ÖNE ÇIKAN ÖZELLİKLER:
+- Users can store the created invoices in localStorage and view them later.
 
-- Fatura bilgilerini (firma adı, ürün, miktar, fiyat, KDV vb.) girme
+- The project features a clean and modern interface designed based on a Figma prototype and styled with CSS.
 
-- Otomatik toplam ve KDV hesaplama
+# HIGHLIGHTED FEATURES
 
-- Faturaları PDF olarak indirme
+- Enter invoice details (company name, product, quantity, price, VAT, etc.)
 
-- Fatura geçmişini localStorage’da saklama
+- Automatic calculation of totals and VAT
 
-- Modern ve responsive tasarım
+- ownload invoices as PDF
 
-# KULLANILAN TEKNOLOJİLER
+- Save invoice history in localStorage
+
+- Modern and responsive design
+
+# TECHNOLOGIES USED
 
 - React.js
 
@@ -28,67 +30,67 @@
 
 - JavaScript (ES6)
 
-- Figma (UI Tasarımı için)
+- Figma (for UI design)
 
-# KURULUM
+# INSTALLATION
 
-1. Projeyi klonla
+1. Clone the repository
 
 ```bash
 git clone https://github.com/gamzefidan/fatura-olusturma-uygulamasi.git
 ```
 
-2. Proje klasörüne gir
+2. Navigate to the project folder
 
 ```bash
 cd fatura-olusturma-uygulamasi
 ```
 
-3. Gerekli bağımlılıkları yükle
+3. Install dependencies
 
 ```bash
 npm install
 ```
 
-4. projeyi çalıştır
+4. Run the project
 
 ```bash
 npm start
 ```
 
-# Kullanım
+# USAGE
 
-1. Fatura Ekleme:
+1. Add an Invoice
 
-- Firma adı, ürün bilgisi, miktar, birim fiyat, KDV oranı ve tarih alanlarını doldur.
+- Fill in fields such as company name, product details, quantity, unit price, VAT rate, and date.
 
-- “Fatura Ekle” butonuna tıklayarak faturayı listeye ekle.
+- Click the “Add Invoice” button to add the invoice to the list.
 
-2. Fatura Silme:
+2. Delete an Invoice
 
-- Her fatura satırında bulunan “Sil” butonuna tıklayarak ilgili faturayı kaldırabilirsin.
+- Click the “Delete” button next to any invoice to remove it from the list.
 
-3. Tüm Faturaları Temizleme:
+3. Clear All Invoices
 
-- “Tümünü Temizle” butonuna tıklayarak listedeki tüm faturaları silebilirsin.
+- Click the “Clear All” button to delete all invoices at once.
 
-4. PDF Olarak İndirme:
+4. Download as PDF
 
-- “PDF İndir” butonuna tıklayarak faturaları tablo halinde PDF olarak dışa aktarabilirsin.
+- Click the “Download PDF” button to export all invoices as a table-formatted PDF file.
 
-# Veri Saklama (LocalStorage)
+# DATA STORAGE (LOCALSTORAGE)
 
-- Uygulama, kullanıcı tarafından oluşturulan tüm fatura verilerini tarayıcı localStorage alanında saklar.
-- Bu sayede sayfa yenilendiğinde veya tarayıcı kapatılıp açıldığında veriler kaybolmaz.
-- “Tümünü Temizle” butonuna tıklayarak bu verileri sıfırlayabilirsin.
+- The application stores all invoice data created by the user in the browser’s localStorage.
+- This ensures that data is not lost when the page is refreshed or the browser is closed and reopened.
+- You can reset all stored data by clicking the “Clear All” button.
 
-# PDF Oluşturma Özelliği
+# PDF GENERATION FEATURE
 
-- PDF oluşturma işlemi, jsPDF ve jspdf-autotable kütüphaneleri ile gerçekleştirilmiştir.
-- PDF çıktısı, oluşturulan faturaların tablo halinde bir dökümünü içerir.
+- The PDF export functionality is implemented using jsPDF and jspdf-autotable libraries.
+- The generated PDF includes a tabular summary of all created invoices.
 
-# EKRAN GÖRÜNTÜLERİ
+# SCREENSHOTS
 
-![Ana Sayfa](./public/home-page.png)
-![Fatura Listesi](./public/invoice-list.png)
-![PDF Görünümü](./public/pdf-view.png)
+![Home Page](./public/home-page.png)
+![Invoice List](./public/invoice-list.png)
+![PDF View](./public/pdf-view.png)
